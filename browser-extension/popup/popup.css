@@ -1,0 +1,410 @@
+/* PhishGuard Popup Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 380px;
+  height: 500px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+  overflow: hidden;
+}
+
+.popup-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  margin: 2px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* Header */
+.header {
+  padding: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.shield-icon {
+  font-size: 20px;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+/* Page Status */
+.page-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  border-left: 4px solid #4caf50;
+}
+
+.page-status.warning {
+  border-left-color: #ff9800;
+  background: #fff3e0;
+}
+
+.page-status.danger {
+  border-left-color: #f44336;
+  background: #ffebee;
+}
+
+.status-icon {
+  font-size: 24px;
+}
+
+.status-info h4 {
+  font-size: 14px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.status-info p {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Quick Actions */
+.quick-actions {
+  margin-bottom: 16px;
+}
+
+.quick-actions h4 {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #333;
+  font-weight: 600;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+  color: #333;
+}
+
+.action-btn:hover {
+  background: #f5f5f5;
+  border-color: #667eea;
+  transform: translateY(-1px);
+}
+
+.btn-icon {
+  font-size: 16px;
+}
+
+/* Statistics */
+.statistics {
+  margin-bottom: 16px;
+}
+
+.statistics h4 {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #333;
+  font-weight: 600;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.stat-number {
+  font-size: 20px;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: #666;
+}
+
+/* URL Input */
+.url-input-section {
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.url-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.url-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.input-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-primary {
+  flex: 1;
+  padding: 8px 16px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background: #5a6fd8;
+}
+
+.btn-secondary {
+  padding: 8px 16px;
+  background: transparent;
+  color: #666;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn-secondary:hover {
+  background: #f5f5f5;
+}
+
+/* Scan Results */
+.scan-results {
+  margin-bottom: 16px;
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.result-header h4 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.result-icon {
+  font-size: 18px;
+}
+
+.result-content {
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.risk-level {
+  margin-bottom: 12px;
+}
+
+.risk-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.risk-badge.low {
+  background: #e8f5e8;
+  color: #2e7d32;
+}
+
+.risk-badge.medium {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.risk-badge.high {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+.result-description {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.threats-list h5 {
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 600;
+}
+
+.threats-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.threats-list li {
+  font-size: 11px;
+  color: #666;
+  padding: 4px 0;
+  padding-left: 16px;
+  position: relative;
+}
+
+.threats-list li:before {
+  content: "•";
+  color: #f44336;
+  position: absolute;
+  left: 0;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  padding: 20px;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 12px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Footer */
+.footer {
+  padding: 12px 16px;
+  border-top: 1px solid #e0e0e0;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 8px 8px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-links a {
+  font-size: 11px;
+  color: #666;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #667eea;
+}
+
+.version {
+  font-size: 10px;
+  color: #999;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+  body {
+    width: 350px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

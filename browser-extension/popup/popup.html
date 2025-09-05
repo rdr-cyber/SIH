@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhishGuard - AI Security</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <span class="shield-icon">🛡️</span>
+        <h3>PhishGuard</h3>
+      </div>
+      <div class="status-indicator" id="statusIndicator">
+        <span class="status-dot"></span>
+        <span class="status-text">Protected</span>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Current Page Status -->
+      <div class="page-status" id="pageStatus">
+        <div class="status-icon">✅</div>
+        <div class="status-info">
+          <h4>Page Status: Safe</h4>
+          <p>No threats detected on this page</p>
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="quick-actions">
+        <h4>Quick Actions</h4>
+        <div class="action-buttons">
+          <button class="action-btn" id="scanPageBtn">
+            <span class="btn-icon">🔍</span>
+            Scan This Page
+          </button>
+          <button class="action-btn" id="checkUrlBtn">
+            <span class="btn-icon">🔗</span>
+            Check URL
+          </button>
+          <button class="action-btn" id="reportSiteBtn">
+            <span class="btn-icon">⚠️</span>
+            Report Site
+          </button>
+        </div>
+      </div>
+
+      <!-- Statistics -->
+      <div class="statistics">
+        <h4>Protection Stats</h4>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number" id="threatsBlocked">0</div>
+            <div class="stat-label">Threats Blocked</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" id="pagesScanned">0</div>
+            <div class="stat-label">Pages Scanned</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- URL Input (Hidden by default) -->
+      <div class="url-input-section" id="urlInputSection" style="display: none;">
+        <input type="text" id="urlInput" placeholder="Enter URL to check..." class="url-input">
+        <div class="input-actions">
+          <button class="btn-primary" id="checkUrlSubmit">Check</button>
+          <button class="btn-secondary" id="cancelUrlCheck">Cancel</button>
+        </div>
+      </div>
+
+      <!-- Scan Results -->
+      <div class="scan-results" id="scanResults" style="display: none;">
+        <div class="result-header">
+          <span class="result-icon" id="resultIcon">🔍</span>
+          <h4 id="resultTitle">Scan Results</h4>
+        </div>
+        <div class="result-content">
+          <div class="risk-level" id="riskLevel">
+            <span class="risk-badge">LOW</span>
+          </div>
+          <p class="result-description" id="resultDescription">
+            This page appears to be safe.
+          </p>
+          <div class="threats-list" id="threatsList" style="display: none;">
+            <h5>Detected Threats:</h5>
+            <ul id="threatsUL"></ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loading State -->
+      <div class="loading" id="loadingState" style="display: none;">
+        <div class="spinner"></div>
+        <p>Analyzing security...</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-links">
+        <a href="#" id="settingsLink">Settings</a>
+        <a href="#" id="helpLink">Help</a>
+        <a href="#" id="aboutLink">About</a>
+      </div>
+      <div class="version">v1.0.0</div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

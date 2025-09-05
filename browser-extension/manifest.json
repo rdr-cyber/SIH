@@ -1,0 +1,67 @@
+{
+  "manifest_version": 3,
+  "name": "PhishGuard - AI Phishing Detector",
+  "version": "1.0.0",
+  "description": "AI-powered real-time protection against phishing and scam websites with multilingual support.",
+  
+  "permissions": [
+    "activeTab",
+    "storage",
+    "notifications",
+    "webNavigation",
+    "declarativeNetRequest"
+  ],
+  
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "PhishGuard - Check Page Security",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "phishing_rules",
+        "enabled": true,
+        "path": "rules/phishing_rules.json"
+      }
+    ]
+  },
+  
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*", "warning.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  
+  "options_page": "options/options.html"
+}
