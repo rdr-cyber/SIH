@@ -1,4 +1,9 @@
-# AI-Powered Phishing & Scam Detector + Awareness App
+# SIH
+ai-phishing-guard
+>>>>>>> aad66a8f7a357cf09cedd7255c634efb5ad241b5
+# PhishGuard AI - Smart India Hackathon 2024
+
+**AI-Powered Phishing & Scam Detector + Awareness App**
 
 ## 🔐 Overview
 A comprehensive security solution that protects users from phishing and scam threats while educating them through gamified learning experiences.
@@ -230,3 +235,7 @@ This project is developed for SIH (Smart India Hackathon) and contributes to Dig
 
 ## 📄 License
 MIT License
+=======
+# SIH
+ai-phishing-guard
+>>>>>>> aad66a8f7a357cf09cedd7255c634efb5ad241b5
