@@ -1,4 +1,5 @@
 class MultilingualService {
+class MultilingualService {
   constructor() {
     this.translations = {
       // Threat explanations
@@ -276,6 +277,30 @@ class MultilingualService {
 
     return localized;
   }
+
+  // Detect language from text (simplified)
+  detectLanguage(text) {
+    // Simple language detection based on character patterns
+    if (/[\u0900-\u097F]/.test(text)) return 'hi'; // Hindi
+    if (/[\u0980-\u09FF]/.test(text)) return 'bn'; // Bengali
+    if (/[\u0B80-\u0BFF]/.test(text)) return 'ta'; // Tamil
+    if (/[\u0C00-\u0C7F]/.test(text)) return 'te'; // Telugu
+    if (/[\u0D00-\u0D7F]/.test(text)) return 'ml'; // Malayalam
+    if (/[\u0A80-\u0AFF]/.test(text)) return 'gu'; // Gujarati
+    if (/[\u0900-\u097F]/.test(text)) return 'mr'; // Marathi
+    return 'en'; // Default to English
+  }
+
+  // Get UI label translation
+  getUILabel(key, language = 'en') {
+    return this.translate(key, 'ui', language);
+  }
+
+  // Get available languages
+  getAvailableLanguages() {
+    return ['en', 'hi', 'bn', 'ta', 'te', 'ml', 'gu', 'mr'];
+  }
+}
 }
 
 module.exports = new MultilingualService();

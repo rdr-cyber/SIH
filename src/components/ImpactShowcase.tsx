@@ -3,14 +3,13 @@ import {
   Container,
   Typography,
   Box,
+  Grid,
+  Card,
+  CardContent,
   Paper,
-  Unstable_Grid2 as Grid,
-  useTheme,
-  useMediaQuery,
-  alpha,
   Chip,
-  Avatar,
   LinearProgress,
+  Avatar,
   List,
   ListItem,
   ListItemIcon,
@@ -162,8 +161,8 @@ const ImpactShowcase: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Paper sx={{ height: '100%', textAlign: 'center', borderRadius: 3 }}>
-                <Box sx={{ p: 3 }}>
+              <Card sx={{ height: '100%', textAlign: 'center', borderRadius: 3 }}>
+                <CardContent sx={{ p: 3 }}>
                   <Avatar
                     sx={{
                       bgcolor: metric.color,
@@ -184,8 +183,8 @@ const ImpactShowcase: React.FC = () => {
                   <Typography variant="body2" color="text.secondary">
                     {metric.subtitle}
                   </Typography>
-                </Box>
-              </Paper>
+                </CardContent>
+              </Card>
             </motion.div>
           </Grid>
         ))}
@@ -244,8 +243,8 @@ const ImpactShowcase: React.FC = () => {
       {/* Government Integration */}
       <Grid container spacing={4} sx={{ mb: 6 }}>
         <Grid item xs={12} md={6}>
-          <Paper sx={{ height: '100%', borderRadius: 3 }}>
-            <Box sx={{ p: 4 }}>
+          <Card sx={{ height: '100%', borderRadius: 3 }}>
+            <CardContent sx={{ p: 4 }}>
               <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <BankIcon color="primary" />
                 Government & Financial Integration
@@ -263,13 +262,13 @@ const ImpactShowcase: React.FC = () => {
                   </ListItem>
                 ))}
               </List>
-            </Box>
-          </Paper>
+            </CardContent>
+          </Card>
         </Grid>
 
         <Grid item xs={12} md={6}>
-          <Paper sx={{ height: '100%', borderRadius: 3 }}>
-            <Box sx={{ p: 4 }}>
+          <Card sx={{ height: '100%', borderRadius: 3 }}>
+            <CardContent sx={{ p: 4 }}>
               <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <TrendingUpIcon color="primary" />
                 Economic Impact Projection
@@ -295,8 +294,8 @@ const ImpactShowcase: React.FC = () => {
                 <Typography variant="body2">Year 5 Impact</Typography>
                 <Typography variant="body2" fontWeight="bold">₹500+ Crores</Typography>
               </Box>
-            </Box>
-          </Paper>
+            </CardContent>
+          </Card>
         </Grid>
       </Grid>
 
@@ -313,8 +312,8 @@ const ImpactShowcase: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
               >
-                <Paper sx={{ height: '100%', borderRadius: 3 }}>
-                  <Box sx={{ p: 3 }}>
+                <Card sx={{ height: '100%', borderRadius: 3 }}>
+                  <CardContent sx={{ p: 3 }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                       <TimelineIcon color="primary" sx={{ mr: 1 }} />
                       <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
@@ -342,8 +341,8 @@ const ImpactShowcase: React.FC = () => {
                         • {highlight}
                       </Typography>
                     ))}
-                  </Box>
-                </Paper>
+                  </CardContent>
+                </Card>
               </motion.div>
             </Grid>
           ))}
@@ -368,7 +367,7 @@ const ImpactShowcase: React.FC = () => {
           Modern AI + Social Impact + Blockchain Innovation = Judge's Choice
         </Typography>
         <Grid container spacing={3}>
-          <Grid size={{ xs: 12, md: 4 }}>
+          <Grid item xs={12} md={4}>
             <Box>
               <Typography variant="h6" sx={{ mb: 1, fontWeight: 'bold' }}>
                 🤖 AI Innovation
@@ -378,7 +377,7 @@ const ImpactShowcase: React.FC = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid size={{ xs: 12, md: 4 }}>
+          <Grid item xs={12} md={4}>
             <Box>
               <Typography variant="h6" sx={{ mb: 1, fontWeight: 'bold' }}>
                 🌍 Social Impact
@@ -388,7 +387,7 @@ const ImpactShowcase: React.FC = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid size={{ xs: 12, md: 4 }}>
+          <Grid item xs={12} md={4}>
             <Box>
               <Typography variant="h6" sx={{ mb: 1, fontWeight: 'bold' }}>
                 ⛓️ Blockchain Power

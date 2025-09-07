@@ -7,63 +7,177 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="AI-Powered Phishing & Scam Detector + Awareness App"
+      content="PhishGuard AI - Quantum Cybersecurity Protection"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>PhishGuard - AI Phishing Detector</title>
+    <title>PhishGuard AI - Quantum Guardian</title>
     
-    <!-- Google Fonts -->
+    <!-- Epic Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
       body {
-        font-family: 'Inter', sans-serif;
         margin: 0;
-        padding: 0;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        font-family: 'Orbitron', 'Rajdhani', -apple-system, BlinkMacSystemFont,
+          'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+          'Droid Sans', 'Helvetica Neue', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+        color: #ffffff;
       }
-      
-      #root {
-        min-height: 100vh;
+
+      code {
+        font-family: 'Courier New', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+          monospace;
       }
-      
-      .loading-screen {
+
+      /* Loading Screen */
+      #loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        font-size: 24px;
-        font-weight: 600;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
       }
-      
-      .spinner {
-        border: 4px solid rgba(255, 255, 255, 0.3);
+
+      .quantum-loader {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 30px;
+      }
+
+      .quantum-core {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 30px;
+        background: radial-gradient(circle, #00ffff 0%, #004d4d 100%);
         border-radius: 50%;
-        border-top: 4px solid white;
-        width: 40px;
-        height: 40px;
-        animation: spin 1s linear infinite;
-        margin-right: 20px;
+        box-shadow: 0 0 30px #00ffff;
+        animation: quantumPulse 2s ease-in-out infinite;
       }
-      
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+
+      .quantum-ring {
+        position: absolute;
+        border: 2px solid transparent;
+        border-radius: 50%;
+        animation: quantumSpin 3s linear infinite;
+      }
+
+      .ring-1 {
+        width: 60px;
+        height: 60px;
+        top: 20px;
+        left: 20px;
+        border-top-color: #00ffff;
+        border-right-color: #00ffff;
+      }
+
+      .ring-2 {
+        width: 80px;
+        height: 80px;
+        top: 10px;
+        left: 10px;
+        border-bottom-color: #ff00ff;
+        border-left-color: #ff00ff;
+        animation-direction: reverse;
+        animation-duration: 2s;
+      }
+
+      .ring-3 {
+        width: 100px;
+        height: 100px;
+        top: 0;
+        left: 0;
+        border-top-color: #ffff00;
+        border-bottom-color: #ffff00;
+        animation-duration: 4s;
+      }
+
+      @keyframes quantumPulse {
+        0% { transform: translate(-50%, -50%) scale(1); }
+        50% { transform: translate(-50%, -50%) scale(1.2); }
+        100% { transform: translate(-50%, -50%) scale(1); }
+      }
+
+      @keyframes quantumSpin {
+        0% { transform: rotateY(0deg) rotateZ(0deg); }
+        100% { transform: rotateY(360deg) rotateZ(360deg); }
+      }
+
+      .loading-title {
+        font-family: 'Orbitron', monospace;
+        font-size: 2.5rem;
+        font-weight: 900;
+        background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #ff0080);
+        background-size: 300% 300%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: holographicShimmer 3s ease-in-out infinite;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+      }
+
+      .loading-subtitle {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 1.2rem;
+        color: #00ffff;
+        font-weight: 600;
+        text-shadow: 0 0 10px #00ffff;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      @keyframes holographicShimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
       }
     </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root">
-      <div class="loading-screen">
-        <div class="spinner"></div>
-        Loading PhishGuard...
+    
+    <!-- Epic Loading Screen -->
+    <div id="loading-screen">
+      <div class="quantum-loader">
+        <div class="quantum-core"></div>
+        <div class="quantum-ring ring-1"></div>
+        <div class="quantum-ring ring-2"></div>
+        <div class="quantum-ring ring-3"></div>
       </div>
+      <h1 class="loading-title">PHISHGUARD</h1>
+      <p class="loading-subtitle">Quantum AI Initializing...</p>
     </div>
+    
+    <div id="root"></div>
+    
+    <script>
+      // Hide loading screen when React app loads
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const loadingScreen = document.getElementById('loading-screen');
+          if (loadingScreen) {
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => {
+              loadingScreen.style.display = 'none';
+            }, 500);
+          }
+        }, 1000); // Show loading for 1 second to show the epic loading
+      });
+    </script>
   </body>
 </html>

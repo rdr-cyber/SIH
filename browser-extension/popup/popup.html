@@ -3,112 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PhishGuard - AI Security</title>
+  <title>PhishGuard - QUANTUM AI GUARDIAN</title>
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <div class="popup-container">
-    <!-- Header -->
-    <div class="header">
-      <div class="logo">
-        <span class="shield-icon">🛡️</span>
-        <h3>PhishGuard</h3>
+  <div class="popup-container cyberpunk-theme">
+    <!-- EPIC HEADER -->
+    <div class="header quantum-header">
+      <div class="logo epic-logo">
+        <div class="shield-glow">
+          <span class="shield-icon quantum-shield">⚡🛡️⚡</span>
+        </div>
+        <div class="logo-text">
+          <h3 class="quantum-title">PHISHGUARD</h3>
+          <span class="ai-subtitle">QUANTUM AI</span>
+        </div>
       </div>
-      <div class="status-indicator" id="statusIndicator">
-        <span class="status-dot"></span>
-        <span class="status-text">Protected</span>
+      <div class="status-indicator epic-status" id="statusIndicator">
+        <div class="status-orb"></div>
+        <div class="status-rings"></div>
+        <span class="status-text quantum-text">GODMODE ACTIVE</span>
       </div>
     </div>
 
-    <!-- Main Content -->
-    <div class="main-content">
-      <!-- Current Page Status -->
-      <div class="page-status" id="pageStatus">
-        <div class="status-icon">✅</div>
+    <!-- MATRIX BACKGROUND -->
+    <div class="matrix-bg"></div>
+    <div class="particle-field" id="particleField"></div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content epic-content">
+      <!-- QUANTUM PAGE STATUS -->
+      <div class="page-status quantum-status" id="pageStatus">
+        <div class="status-icon epic-icon">🔮</div>
         <div class="status-info">
-          <h4>Page Status: Safe</h4>
-          <p>No threats detected on this page</p>
+          <h4 class="glitch-text">DIMENSIONAL SCAN: SECURE</h4>
+          <p class="cyber-description">Reality matrix validated - No quantum threats detected</p>
         </div>
+        <div class="scan-pulse"></div>
       </div>
 
-      <!-- Quick Actions -->
-      <div class="quick-actions">
-        <h4>Quick Actions</h4>
-        <div class="action-buttons">
-          <button class="action-btn" id="scanPageBtn">
-            <span class="btn-icon">🔍</span>
-            Scan This Page
+      <!-- GODLIKE ACTIONS -->
+      <div class="quick-actions epic-actions">
+        <h4 class="section-title holographic">⚡ QUANTUM POWERS ⚡</h4>
+        <div class="action-buttons god-buttons">
+          <button class="action-btn quantum-btn scan-btn" id="scanPageBtn">
+            <div class="btn-glow"></div>
+            <span class="btn-icon cyber-icon">🔥🔍🔥</span>
+            <span class="btn-text">REALITY SCAN</span>
+            <div class="energy-waves"></div>
           </button>
-          <button class="action-btn" id="checkUrlBtn">
-            <span class="btn-icon">🔗</span>
-            Check URL
+          <button class="action-btn quantum-btn url-btn" id="checkUrlBtn">
+            <div class="btn-glow"></div>
+            <span class="btn-icon cyber-icon">⚡🔗⚡</span>
+            <span class="btn-text">PORTAL CHECK</span>
+            <div class="energy-waves"></div>
           </button>
-          <button class="action-btn" id="reportSiteBtn">
-            <span class="btn-icon">⚠️</span>
-            Report Site
+          <button class="action-btn quantum-btn report-btn" id="reportSiteBtn">
+            <div class="btn-glow"></div>
+            <span class="btn-icon cyber-icon">💀⚠️💀</span>
+            <span class="btn-text">MARK ENEMY</span>
+            <div class="energy-waves"></div>
           </button>
         </div>
       </div>
 
-      <!-- Statistics -->
-      <div class="statistics">
-        <h4>Protection Stats</h4>
-        <div class="stats-grid">
-          <div class="stat-item">
-            <div class="stat-number" id="threatsBlocked">0</div>
-            <div class="stat-label">Threats Blocked</div>
+      <!-- GODLIKE STATISTICS -->
+      <div class="statistics epic-stats">
+        <h4 class="section-title holographic">🏆 LEGENDARY ACHIEVEMENTS 🏆</h4>
+        <div class="stats-grid god-stats">
+          <div class="stat-item epic-stat threats-stat">
+            <div class="stat-glow"></div>
+            <div class="stat-icon">💀</div>
+            <div class="stat-number quantum-number" id="threatsBlocked">0</div>
+            <div class="stat-label cosmic-label">DEMONS SLAIN</div>
+            <div class="stat-pulse"></div>
           </div>
-          <div class="stat-item">
-            <div class="stat-number" id="pagesScanned">0</div>
-            <div class="stat-label">Pages Scanned</div>
+          <div class="stat-item epic-stat scans-stat">
+            <div class="stat-glow"></div>
+            <div class="stat-icon">👁️</div>
+            <div class="stat-number quantum-number" id="pagesScanned">0</div>
+            <div class="stat-label cosmic-label">REALMS SCANNED</div>
+            <div class="stat-pulse"></div>
           </div>
         </div>
       </div>
 
-      <!-- URL Input (Hidden by default) -->
-      <div class="url-input-section" id="urlInputSection" style="display: none;">
-        <input type="text" id="urlInput" placeholder="Enter URL to check..." class="url-input">
-        <div class="input-actions">
-          <button class="btn-primary" id="checkUrlSubmit">Check</button>
-          <button class="btn-secondary" id="cancelUrlCheck">Cancel</button>
+      <!-- QUANTUM URL INPUT -->
+      <div class="url-input-section cyber-input" id="urlInputSection" style="display: none;">
+        <div class="input-container">
+          <input type="text" id="urlInput" placeholder="Enter portal coordinates..." class="url-input quantum-input">
+          <div class="input-glow"></div>
+        </div>
+        <div class="input-actions epic-actions-row">
+          <button class="btn-primary quantum-primary" id="checkUrlSubmit">
+            <span>🚀 ANALYZE</span>
+            <div class="btn-particles"></div>
+          </button>
+          <button class="btn-secondary quantum-secondary" id="cancelUrlCheck">
+            <span>❌ ABORT</span>
+          </button>
         </div>
       </div>
 
-      <!-- Scan Results -->
-      <div class="scan-results" id="scanResults" style="display: none;">
-        <div class="result-header">
-          <span class="result-icon" id="resultIcon">🔍</span>
-          <h4 id="resultTitle">Scan Results</h4>
+      <!-- EPIC SCAN RESULTS -->
+      <div class="scan-results epic-results" id="scanResults" style="display: none;">
+        <div class="result-header quantum-header">
+          <div class="result-aura"></div>
+          <span class="result-icon epic-result-icon" id="resultIcon">🔮</span>
+          <h4 id="resultTitle" class="glitch-text">QUANTUM ANALYSIS</h4>
         </div>
-        <div class="result-content">
-          <div class="risk-level" id="riskLevel">
-            <span class="risk-badge">LOW</span>
+        <div class="result-content cyber-content">
+          <div class="risk-level epic-risk" id="riskLevel">
+            <span class="risk-badge quantum-badge">ANALYZING</span>
+            <div class="risk-glow"></div>
           </div>
-          <p class="result-description" id="resultDescription">
-            This page appears to be safe.
+          <p class="result-description quantum-description" id="resultDescription">
+            Dimensional analysis in progress...
           </p>
-          <div class="threats-list" id="threatsList" style="display: none;">
-            <h5>Detected Threats:</h5>
-            <ul id="threatsUL"></ul>
+          <div class="threats-list epic-threats" id="threatsList" style="display: none;">
+            <h5 class="threats-title">🔥 DETECTED ANOMALIES 🔥</h5>
+            <ul id="threatsUL" class="threats-ul"></ul>
           </div>
         </div>
       </div>
 
-      <!-- Loading State -->
-      <div class="loading" id="loadingState" style="display: none;">
-        <div class="spinner"></div>
-        <p>Analyzing security...</p>
+      <!-- EPIC LOADING STATE -->
+      <div class="loading epic-loading" id="loadingState" style="display: none;">
+        <div class="quantum-spinner">
+          <div class="spinner-core"></div>
+          <div class="spinner-rings">
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+            <div class="ring ring-3"></div>
+          </div>
+        </div>
+        <p class="loading-text glitch-text">PENETRATING QUANTUM DIMENSIONS...</p>
+        <div class="loading-bars">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
       </div>
     </div>
 
-    <!-- Footer -->
-    <div class="footer">
-      <div class="footer-links">
-        <a href="#" id="settingsLink">Settings</a>
-        <a href="#" id="helpLink">Help</a>
-        <a href="#" id="aboutLink">About</a>
+    <!-- EPIC FOOTER -->
+    <div class="footer epic-footer">
+      <div class="footer-links quantum-links">
+        <a href="#" id="settingsLink" class="footer-link">⚙️ CONFIG</a>
+        <a href="#" id="helpLink" class="footer-link">❓ INTEL</a>
+        <a href="#" id="aboutLink" class="footer-link">ℹ️ ORIGIN</a>
       </div>
-      <div class="version">v1.0.0</div>
+      <div class="version quantum-version">QUANTUM v∞.∞.∞</div>
     </div>
   </div>
 

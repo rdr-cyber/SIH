@@ -1,26 +1,25 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   Container,
   Typography,
   Box,
-  Card,
-  CardContent,
-  Button,
+  Paper,
   TextField,
-  Unstable_Grid2 as Grid,
+  Button,
   Avatar,
   List,
   ListItem,
   ListItemAvatar,
   ListItemText,
-  Paper,
   Chip,
+  Alert,
+  Card,
+  CardContent,
+  Grid,
+  Divider,
   IconButton,
   Menu,
   MenuItem,
-  useTheme,
-  useMediaQuery,
-  Divider,
 } from '@mui/material';
 import {
   SmartToy as BotIcon,
@@ -236,7 +235,7 @@ const ChatbotPage: React.FC = () => {
       </motion.div>
 
       <Grid container spacing={4}>
-        <Grid size={{ xs: 12, lg: 8 }}>
+        <Grid item xs={12} lg={8}>
           <Card sx={{ height: '70vh', display: 'flex', flexDirection: 'column', borderRadius: 3 }}>
             {/* Chat Header */}
             <Box
@@ -404,7 +403,7 @@ const ChatbotPage: React.FC = () => {
           </Card>
         </Grid>
 
-        <Grid size={{ xs: 12, lg: 4 }}>
+        <Grid item xs={12} lg={4}>
           {/* Quick Actions */}
           <Card sx={{ mb: 3, borderRadius: 3 }}>
             <CardContent>

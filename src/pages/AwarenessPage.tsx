@@ -3,37 +3,30 @@ import {
   Container,
   Typography,
   Box,
+  Grid,
   Card,
   CardContent,
   CardActions,
   Button,
-  Unstable_Grid2 as Grid,
-  Chip,
   Dialog,
   DialogTitle,
   DialogContent,
   DialogActions,
-  Radio,
   RadioGroup,
   FormControlLabel,
+  Radio,
+  LinearProgress,
+  Chip,
+  Paper,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
   Alert,
   Stepper,
   Step,
   StepLabel,
   StepContent,
-  TextField,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Divider,
-  Paper,
-  useTheme,
-  useMediaQuery,
-  LinearProgress,
 } from '@mui/material';
 import {
   School as SchoolIcon,
@@ -326,12 +319,12 @@ const AwarenessPage: React.FC = () => {
 
       <Grid container spacing={4}>
         {/* Interactive Quizzes Section */}
-        <Grid size={12}>
+        <Grid item xs={12}>
           <Typography variant="h4" gutterBottom sx={{ mb: 3 }}>
             📝 Interactive Security Quizzes
           </Typography>
           <Grid container spacing={3}>
-            <Grid size={{ xs: 12, md: 4 }}>
+            <Grid item xs={12} md={4}>
               <Card sx={{ height: '100%', borderRadius: 3 }}>
                 <CardContent>
                   <Box sx={{ textAlign: 'center', mb: 2 }}>
@@ -360,7 +353,7 @@ const AwarenessPage: React.FC = () => {
               </Card>
             </Grid>
 
-            <Grid size={{ xs: 12, md: 4 }}>
+            <Grid item xs={12} md={4}>
               <Card sx={{ height: '100%', borderRadius: 3 }}>
                 <CardContent>
                   <Box sx={{ textAlign: 'center', mb: 2 }}>
@@ -389,7 +382,7 @@ const AwarenessPage: React.FC = () => {
               </Card>
             </Grid>
 
-            <Grid size={{ xs: 12, md: 4 }}>
+            <Grid item xs={12} md={4}>
               <Card sx={{ height: '100%', borderRadius: 3 }}>
                 <CardContent>
                   <Box sx={{ textAlign: 'center', mb: 2 }}>
@@ -421,7 +414,7 @@ const AwarenessPage: React.FC = () => {
         </Grid>
 
         {/* Hack the Hacker Game Section */}
-        <Grid size={12}>
+        <Grid item xs={12}>
           <Typography variant="h4" gutterBottom sx={{ mb: 3 }}>
             🎮 Hack the Hacker Game
           </Typography>
@@ -451,7 +444,7 @@ const AwarenessPage: React.FC = () => {
 
           <Grid container spacing={2}>
             {hackTheHackerScenarios.map((scenario, index) => (
-              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={scenario.level}>
+              <Grid item xs={12} sm={6} md={4} key={scenario.level}>
                 <Card 
                   sx={{ 
                     borderRadius: 2,
@@ -483,13 +476,13 @@ const AwarenessPage: React.FC = () => {
         </Grid>
 
         {/* Achievements Section */}
-        <Grid size={12}>
+        <Grid item xs={12}>
           <Typography variant="h4" gutterBottom sx={{ mb: 3 }}>
             🏆 Achievements
           </Typography>
           <Grid container spacing={3}>
             {achievements.map((achievement) => (
-              <Grid size={{ xs: 12, sm: 6, md: 3 }} key={achievement.id}>
+              <Grid item xs={12} sm={6} md={3} key={achievement.id}>
                 <Card 
                   sx={{ 
                     borderRadius: 3,
